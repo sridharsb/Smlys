@@ -1,0 +1,306 @@
+.floating {  
+    position: absolute;
+    right: 1%;
+    top: 5%;
+    width: 54%;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.navbar-item is-active
+{ 
+font-size: 100px; text-decoration: none; 
+}
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.counter
+{
+    background-color : white;
+    text-align: center;
+    box-shadow: 0 4px 80px 0 rgba(0, 0, 0, 0.07), 0 6px 100px 0 rgba(0, 0, 0, 0.02);
+
+}
+.employees,.customer,.design,.order
+{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.counter-count
+{
+    font-size: 18px;
+    background-color: #00b3e7;
+    border-radius: 50%;
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    line-height: 92px;
+    width: 92px;
+    height: 92px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: inline-block;
+}
+
+.employee-p,.customer-p,.order-p,.design-p
+{
+    font-size: 24px;
+    color: #000000;
+    line-height: 34px;
+}
+
+.text_achievements {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+
+.columns_loc {
+    position: relative;
+    top: 100px;
+    padding-bottom: 120px;
+}
+
+.amazing_tour {
+    padding: 10% 50px;
+}
+
+.tour_text {
+    position: relative;
+    top: 100px;
+}
+
+.section-break-5 {
+   margin: 0 150px 50px 150px;
+    background-color: gray;
+    
+}
+  
+.most {
+    padding: 0 0 40px 0;
+}
+.book {
+    padding: 10%;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 25px;
+  
+}
+
+a {
+    color: black;
+}
+
+.pop {
+    margin: 1%;
+}
+
+.popular {
+    padding: 5%;
+}
+
+.ser_div {
+    margin: 5% 10%;
+    padding: 2%;
+}
+
+.service {
+    margin: 0 0 10% 0;
+}
+
+.news {
+    height: 740px;
+    color: white;
+}
+
+.news_con {
+    padding: 10% 10% 5% 10%;
+}
+
+.container1 {
+    padding: 20px;
+    position: relative;
+    left: 22%;
+}
+  
+  input[type=text], input[type=submit] {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+ 
+  .aa {
+      margin: 0 20px;
+  }
+
+  .comment {
+      margin: 8%;
+  }
+
+  .checked {
+    color: orange;
+  }
+
+  div.fixed {
+      text-align: center;
+      background-color: black;
+      color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    
+  } 
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    border-radius: 25px;
+    background-color: #57A0D3;
+    margin: 3% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+      z-index: 101;
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .pop_txt {
+      position: absolute;
+      top: 25%;
+  }
+
+  .pop_img {
+      position: relative;
+      width: 40%;
+      left: 58%;
+
+    }
+
+
+.top_nav {
+   
+    margin: 0px 20px;
+    padding-bottom: 10px;
+}
+.brand_name {
+    position: relative;
+    margin: 10px 0px 0px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+/*    border-bottom: 2px solid;*/
+    padding: 10px 10px 0px 10px;
+    display: inline-block;
+}
+
+.title_c {
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-10%);
+}
+
+.top_menu {
+    position: absolute;
+    top: 5%;
+    right: 0%;
+    display: inline;
+    
+}
+
+.menu_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.menu_li {
+    display: inline;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px 8px;
+    
+}
+
+.menu_link {
+   
+    text-decoration: none;
+    color: black;
+}
+
+.menu_link1 {
+    position: relative;
+    top: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+
+.social_links {
+    position: absolute;
+    left: 80%;
+    top: 5%;
+}
+
+.social_links1 {
+    position: relative;
+    top: -30px;
+    left: 80%;
+    
+}
+
+.terms {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 40px;
+}
+
+.line {
+    padding: 0 30%;
+}
+
+
+.p_text {
+    position: relative;
+    top: 100px;
+    padding: 50px;
+}
+
+.p_text_sub {
+    position: relative;
+    top: 10px;
+    padding: 50px;
+}

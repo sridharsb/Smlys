@@ -1,0 +1,31 @@
+body {
+    background: url(img6.png);
+    width: cover;
+}
+
+.past {
+    padding: 0px 20px;
+}
+.pp1 {
+     font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    
+}
+
+.pd1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+   
+}
+
+.pd2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.ul {
+    column-count: 2;
+}

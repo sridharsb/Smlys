@@ -1,0 +1,189 @@
+body {
+    background: url(img6.png);
+    width: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.zoom {
+  
+
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.05); /* IE 9 */
+  -webkit-transform: scale(1.05); /* Safari 3-8 */
+  transform: scale(1.05); 
+}
+
+
+
+
+.p_list {
+    position: relative;
+    margin: 0px 200px 0px 150px;
+}
+
+.ul_list {
+    list-style: none;
+}
+.btn {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    margin: 0px;
+    background:	#F8F8F8;
+    border: none;
+    cursor: pointer;
+}
+
+.li {
+    padding: 5px;
+}
+.p1 {
+    padding: 0px 20px;
+    float: left;
+}
+
+.p2 {
+    padding: 0px 20px;
+    float: right;
+}
+
+.columns {
+     padding: 1%;
+   text-align: center;
+
+}
+
+.temple {
+        margin: 10px;
+
+        background: white;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.column {
+/*    margin: 20px;*/
+/*    border: 2px solid black;*/
+}
+
+.column:hover {
+    background: #F8F8FF;
+}
+
+.column1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-align: center;
+  }
+
+.loc_name {
+    font-family: 'Darker Grotesque', sans-serif;
+
+    font-size: 40px;
+}
+
+.t_p{
+    font-family: 'Darker Grotesque', sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 40px;
+}
+
+.t_content{
+    position: relative;
+    left: 50%;
+    margin: 0% -22%;
+}
+
+.field{
+    text-align: center;
+    padding: 0px 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    width: 10%;
+    border-radius: 20px;
+    line-height: 45px;
+    border: 1.5px solid #F2F2F2;
+    margin: 10px 0px;
+    left: 50%;
+}
+
+.t_btn {
+    position: relative;
+    background: white;
+    border: 2px solid gray;
+     font-family: 'Darker Grotesque', sans-serif;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
+    
+  
+    margin: 0px 40px;
+}
+
+.t_p1 {
+    font-family: 'Darker Grotesque', sans-serif;
+    text-align: center;
+    float: left;
+    font-size: 30px;
+}
+
+.btn-group{
+    position: relative;
+    left: 50%;
+    transform: translateX(-12%);
+    margin: 10px 0px;
+}
+
+.btn-group button {
+    width: 6%;
+  background-color: white; /* Green background */
+  border: 2px solid gray;
+    border-radius: 20px;
+  color: white; /* White text */
+  
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+
+
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  border-color: green;
+}
+
+.btn-group1{
+    margin: 0px 36%;
+   
+}
+
+.op{
+     font-family: 'Darker Grotesque', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+.p_img {
+    height: 250px;
+}
+
+.travel {
+    margin: 40px;
+    background: white;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    
+}
