@@ -9,6 +9,7 @@
     animation-timing-function: ease-in-out;
     margin-left: 20px;
     margin-top: 5px;
+    border-radius: 25px;
 }
 
 .navbar-item is-active
