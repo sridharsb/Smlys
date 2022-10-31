@@ -92,7 +92,51 @@ Our Achievements            </h2>
         
 
       </section>
-	
+	﻿<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>Yathra</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"> 
+            <link rel="stylesheet" href="style_about.css"> 
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--    social Links    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+        
+    </head>
+    <body>
+    
+        <div class = "top_nav">
+            
+            <a href = 'index.html' style="color: black"><p class="brand_name"> SMLYS</p></a>
+            
+            <div class="top_menu" id="top_menu">
+            
+                <ul class = "menu_ul" >
+                  <li class="menu_li"><a class = "menu_link" href="index.html">Home</a></li>
+                  <li class="menu_li"><a class = "menu_link" href="programs.html">Programs</a></li>
+                  <li class="menu_li"><a class = "menu_link" href="BookNow.html">Book Now</a></li>
+                  <li class="menu_li"><a class = "menu_link" href="aboutUs.html">About us</a></li>
+                    
+                </ul>
+                
+            </div>
+            
+           
+        </div>
+      	<br>
+<br>
+	    <br>
+	    
+	    <br>
+	    <h1>Photo Gallery</h1>
+	    
+	    
 	<style>
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
@@ -196,28 +240,63 @@ img {vertical-align: middle;}
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 4</div>
+  <div class="numbertext">1 / 10</div>
   <img src="img1.jpg" style="width:100%">
   <div class="text">Karnataka</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 4</div>
+  <div class="numbertext">2 / 10</div>
   <img src="nepal1.jpg" style="width:100%">
   <div class="text">Nepal-Mukthinath</div>
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 4</div>
+  <div class="numbertext">3 / 10</div>
   <img src="nepal2.jpg" style="width:100%">
   <div class="text">Nepal-Mukthinath</div>
 </div>
 	
 <div class="mySlides fade">
-  <div class="numbertext">4/ 4</div>
+  <div class="numbertext">4/ 10</div>
   <img src="vaishnav.jpeg" style="width:100%">
   <div class="text">Sri Vaishnav Devi</div>
 </div>
+<div class="mySlides fade">
+  <div class="numbertext">5/ 10</div>
+  <img src="Narmada parikram.jpeg" style="width:100%">
+  <div class="text">Narmada Parikrama</div>
+</div>	
+
+<div class="mySlides fade">
+  <div class="numbertext">6/ 10</div>
+  <img src="WhatsApp Image 2021-07-04 at 21.33.31.jpeg" style="width:100%">
+  <div class="text">Ayodhya</div>
+</div>	
+
+<div class="mySlides fade">
+  <div class="numbertext">7/ 10</div>
+  <img src="WhatsApp Image 2021-07-04 at 21.36.11.jpeg" style="width:100%">
+  <div class="text">Kudroli </div>
+</div>	
+
+<div class="mySlides fade">
+  <div class="numbertext">8/ 10</div>
+  <img src="WhatsApp Image 2021-07-04 at 21.36.12.jpeg" style="width:100%">
+  <div class="text">Thalai Kaveri</div>
+</div>	
+
+<div class="mySlides fade">
+  <div class="numbertext">9/ 10</div>
+  <img src="Gangotri.jpeg" style="width:100%">
+  <div class="text">Gangotri</div>
+</div>	
+	
+<div class="mySlides fade">
+  <div class="numbertext">10/ 10</div>
+  <img src="Kailash.jpeg" style="width:100%">
+  <div class="text">Khailash</div>
+</div>	
 
 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -230,36 +309,39 @@ img {vertical-align: middle;}
   <span class="dot" onclick="currentSlide(2)"></span> 
   <span class="dot" onclick="currentSlide(3)"></span> 
    <span class="dot" onclick="currentSlide(4)"></span>	
+   <span class="dot" onclick="currentSlide(5)"></span>		
+   <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+   <span class="dot" onclick="currentSlide(9)"></span>	
+   <span class="dot" onclick="currentSlide(10)"></span>	
 </div>
 
+           
+      
 <script>
-var slideIndex = 1;
-showSlides(slideIndex);
+let slideIndex = 0;
+showSlides();
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+    slides[i].style.display = "none";  
   }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 </script>
+   
+
       <!-- services -->
       <section class="service">
         <p class="title is-2" style="text-align: center; padding: 5% 5% 0 5%;">Our Services</p>
