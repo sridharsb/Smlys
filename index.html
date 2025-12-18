@@ -12,8 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
-    
-	
+    <script src="modern-features.js" defer></script>
 	
 </head>
 <body>
@@ -49,7 +48,7 @@
             <a href="programs.html" class="button is-large is-warning" style="padding:30px  50px; border-radius: 40px;">Programs</a>
 		       <br>  <br> <a href="BookNow.html" class="button is-large is-warning" style="padding:30px  50px; border-radius: 40px;">Book Now</a>
 	 <br>  <br> <a href="aboutUs.html" class="button is-large is-warning" style="padding:30px  50px; border-radius: 40px;">About us</a>
-      <br>  <br>    <a href="gallery.html" class="button is-large is-warning" style="padding:30px  50px; border-radius: 40px;">Photo Gallery</a>
+      <br>  <br>    <a href="gallery.html" class="button is-large is-warning" style="padding:30px  50px; border-radius: 40px;">Gallery</a>
 
 
           </div>
@@ -62,7 +61,7 @@
 
       </section>
 
-      <section class="counter" style="padding-top: 100px;">
+      <section class="counter fade-in-on-scroll" style="padding-top: 100px;">
         <div class="hero-body">
             <div class="container has-text-centered">
               
@@ -77,14 +76,14 @@ Our Achievements            </h2>
             </div>
 
             <div class="columns columns_loc">
-                <div class="column">
-                    <span class=" title is-1 Count" style="font-size : 75px; font-family: 'Montserrat', sans-serif;
-                    ">53+</span>
+                <div class="column fade-in-on-scroll">
+                    <span class=" title is-1 Count" id="years-counter" style="font-size : 75px; font-family: 'Montserrat', sans-serif;
+                    ">0+</span>
                     <p class="title is-5">Years Completed</p>
                 </div>
-                <div class="column">
-                        <span class="title is-1 Count" style="font-size : 75px; font-family: 'Montserrat', sans-serif;
-                        ">612+</span>
+                <div class="column fade-in-on-scroll">
+                        <span class="title is-1 Count" id="yathra-counter" style="font-size : 75px; font-family: 'Montserrat', sans-serif;
+                        ">0+</span>
                                             <p class="title is-5">Tours Completed</p>
 
                     </div>           
@@ -344,7 +343,7 @@ function showSlides() {
    
 
       <!-- services -->
-      <section class="service">
+      <section class="service fade-in-on-scroll">
         <p class="title is-2" style="text-align: center; padding: 5% 5% 0 5%;">Our Services</p>
         <div class="card" style="margin:0 10%;">
         <div class="columns ser_div">
@@ -376,53 +375,59 @@ function showSlides() {
       </section>
       <hr class="section-break-5" />
 <!-- comment -->
-        <section class="comment">
+        <section class="comment fade-in-on-scroll">
           <p class="title is-2" style="text-align: center;">What Our Clients Say</p>
-          <div class="columns" style="text-align: center">
-            <div class="card column pop">
-              <p style="padding: 20px 0;">The arrangement are excellent and the involvement of the team is highly commendable. The quality of food and the hospitality shown by them is highly commendable.</p>
-              
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
+          <div class="testimonial-carousel">
+            <div class="testimonial-item active">
+              <div class="columns" style="text-align: center">
+                <div class="card column pop">
+                  <p style="padding: 20px 0;">The arrangement are excellent and the involvement of the team is highly commendable. The quality of food and the hospitality shown by them is highly commendable.</p>
+                  
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
 
-              <p class="title is-4">Chandramouly</p>
-              <p class="c_loc">Telegana</p>
+                  <p class="title is-4">Chandramouly</p>
+                  <p class="c_loc">Telegana</p>
+                </div>
+              </div>
             </div>
 
-            <div class="card column pop">
-                <p style="padding: 20px 0;">Excellent service which no one <br>can even provide and be <br>equal to them. Hospitality,<br> caring, awesome food, etc.
-                  </p>
+            <div class="testimonial-item">
+              <div class="columns" style="text-align: center">
+                <div class="card column pop">
+                    <p style="padding: 20px 0;">Excellent service which no one can even provide and be equal to them. Hospitality, caring, awesome food, etc.</p>
 
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <p class="title is-4">V.Indrajith</p>
-                  <p class="c_loc">Salem</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <p class="title is-4">V.Indrajith</p>
+                    <p class="c_loc">Salem</p>
+                  </div>
+              </div>
+            </div>
 
-                </div>
+            <div class="testimonial-item">
+              <div class="columns" style="text-align: center">
+                <div class="card column pop">
+                    <p style="padding: 20px 0;">The best part for their success is hospitality, explaining the religious importance, good and timely food, personal touch with everybody.</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
 
-              <div class="card column pop">
-                  <p style="padding: 20px 0;">The best part for their success is hospitality,explaining the religious importance,<br> good and timely food,personal touch with everybody.</p>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-                  <span class="fa fa-star checked"></span>
-
-                  <p class="title is-4">Raman</p>
-                  <p class="c_loc">Chennai</p>
-
-                </div>
-
-
+                    <p class="title is-4">Raman</p>
+                    <p class="c_loc">Chennai</p>
+                  </div>
+              </div>
+            </div>
           </div>
-		<p class="title is-4">
-			Bank Details:
+		<p class="title is-4" style="margin-top: 30px;">
 		</p>
 		<p class="title subtitle is-5"
 SRI MAHALAKSHMI YATHRA SERVICE

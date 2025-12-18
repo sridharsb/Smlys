@@ -17,15 +17,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js"></script>
+        <script src="modern-features.js" defer></script>
     </head>
     <body>
          <div class = "top_nav">
             
             <a href = 'index.html' style="color: Black"><p class="brand_name">SMLYS</p></a>
-            <div class="menu" id="menu">
-            
-                <img src="menu.png" onclick="showMenu()" class="menu_img">
-            
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
             <div class="top_menu" id="top_menu">
             
@@ -45,8 +46,8 @@
 </section>
 
 <!--        <p class="p_h">Programs</p>-->
-        <div class = 'temple'>
-         <div class="column1">
+        <div class = 'temple programs'>
+         <div class="column1 fade-in-on-scroll">
             <p >Yathra</p>
         </div>
               
@@ -101,73 +102,6 @@
 							<div class="columns">
 											
 				 <div class="column">
-				<a target="_blank" href="https://drive.google.com/file/d/1lxMCDomYglmXr1AtcjhYj3vUih78cZBD/view?usp=sharing">
-            <div class="card zoom">
-                <div class="card-image">
-                    <figure class="image is-500x500">
-                        <img src="kamakya2.jpg" alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-left">
-                                                </div>
-                        <div class="media-content">
-                                 <p class="title is-4">  Kamakhya Yathra -08.11.25 to 17.11.25</p>
-							  <p class="title is-4">  Vaidhyanath, Kamakhya, Guwahati, Calcutta, Puri, Konark, Bhuvaneswar </p>
-				                           </div>
-                    </div>
-                 </div>
-            </div></a>
-			</div> 
-									
-				 <div class="column">
-				<a target="_blank" href="https://drive.google.com/file/d/1zFoJFky4RfaP5AWHkHxUhaDhaij_yCbo/view?usp=sharing">
-            <div class="card zoom">
-                <div class="card-image">
-                    <figure class="image is-500x500">
-                        <img src="Maha.jpg" alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-left">
-                                                </div>
-                        <div class="media-content">
-                                 <p class="title is-4">  Maharashtra Yathra -23.11.25 to 03.12.25</p>
-							  <p class="title is-4">  5 Jyothirlingams, Tuljapur, Solapur, Pandarpur, Shirdi, Nasik, Ashta (8) Ganapath</p>
-				                           </div>
-                    </div>
-                 </div>
-            </div></a>
-			</div>
-			
-				
-			 <div class="column">
-				<a target="_blank" href="https://drive.google.com/file/d/11k5nJxGhLPmCArO3Izq9UKIaaYAvcAkX/view?usp=sharing">
-            <div class="card zoom">
-                <div class="card-image">
-                    <figure class="image is-500x500">
-                        <img src="murd.jpg" alt="Placeholder image">
-                    </figure>
-                </div>
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-left">
-                                                </div>
-                        <div class="media-content">
-                                 <p class="title is-4">   Karnataka Yathra -14.12.25 to 20.12.25</p>
-							  <p class="title is-4">  Mangalore, Udipi, Murudeshwar, Gokarana, Kollur, Horandu, Sringeri, Dharmasthala, Kukke Subrahmanya, Talakaveri, 
-							  Srirangapatnam, Chamundeswari, Nanjangud, Mysuru.</p>
-				                           </div>
-                    </div>
-                 </div>
-            </div></a>
-			</div>
-		
-	
-			
-			 <div class="column">
 				<a target="_blank" href="https://drive.google.com/file/d/1cvhrVrIhFUqvYd2Ju94dRhZjoxoUqNf7/view?usp=sharing">
             <div class="card zoom">
                 <div class="card-image">
@@ -187,8 +121,6 @@
                  </div>
             </div></a>
 			</div>
-		</div> 
-			<div class ="columns">
 			
 			 <div class="column">
 				<a target="_blank" href="https://drive.google.com/file/d/1Lsl3Gtf6XSXNT54VqmioFvhD9FdvTNpD/view?usp=sharing">
@@ -210,7 +142,7 @@
                  </div>
             </div></a>
 			</div>
-		
+			
 						 <div class="column">
 				<a target="_blank" href="https://drive.google.com/file/d/1K9RfLgdgMvR9SsFsDDAaWAAm5PI8ZFqd/view?usp=sharing">
             <div class="card zoom">
@@ -231,6 +163,8 @@
                  </div>
             </div></a>
 			</div>
+		</div> 
+			<div class ="columns">
 			
 			 <div class="column">
 				<a target="_blank" href="https://drive.google.com/file/d/1r_t3vjEeojjBl-fib1UbrXbQvlrVbPRx/view?usp=sharing">
@@ -273,7 +207,7 @@
                  </div>
             </div></a>
 			</div>
-		
+			
 		<div class="column">
 				<a target="_blank" href="https://drive.google.com/file/d/1hilpcyCcNtugpY-1CYNIWMZwDn_8JkdF/view?usp=sharing">
             <div class="card zoom">
@@ -289,6 +223,29 @@
                         <div class="media-content">
                                  <p class="title is-4">  Narmada Parikrama General Instructions </p>
 							 				                           </div>
+                    </div>
+                 </div>
+            </div></a>
+			</div>
+		</div>
+			<div class ="columns is-centered">
+			
+			 <div class="column is-4">
+				<a target="_blank" href="https://drive.google.com/file/d/1pA_MSxhjw_nN36dFZiQTCbM94JbcTZk2/view?usp=sharing">
+            <div class="card zoom">
+                <div class="card-image">
+                    <figure class="image is-500x500">
+                        <img src="chardham.jpg" alt="Placeholder image">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                                                </div>
+                        <div class="media-content">
+                                 <p class="title is-4">  Winter (4) Chardham Yathra - 20.3.26 to 1.4.26</p>
+							  <p class="title is-4">  Delhi, Haridwar, 6 Badri, 5 Prayag, Kalpeshwar Kedar, 4 dham - Kharsali, Mukbha, Ukhimath, Pandukeswar </p>
+				                           </div>
                     </div>
                  </div>
             </div></a>
