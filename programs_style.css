@@ -226,3 +226,321 @@ body {
 
     
 }
+
+/* Image optimization for program cards */
+.card-image {
+    height: 250px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.card-image figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.card-image figure.image {
+    width: 100%;
+    height: 100%;
+}
+
+.card-image figure.image.is-500x500 {
+    width: 100%;
+    height: 100%;
+    padding-top: 0 !important;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* General Instructions cards - make them square button-like */
+.general-instructions-columns {
+    justify-content: center !important;
+    max-width: 350px !important;
+    margin: 0 auto !important;
+    gap: 15px !important;
+    padding: 1% !important;
+}
+
+.general-instructions-columns .column {
+    max-width: 150px !important;
+    flex: 0 0 150px !important;
+    width: 150px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.general-instructions-columns a {
+    display: block !important;
+    width: 150px !important;
+    height: 150px !important;
+    text-decoration: none !important;
+}
+
+.general-instructions-card {
+    width: 150px !important;
+    height: 150px !important;
+    min-width: 150px !important;
+    min-height: 150px !important;
+    max-width: 150px !important;
+    max-height: 150px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.3s ease !important;
+    aspect-ratio: 1 / 1 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.general-instructions-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    transform: translateY(-2px) !important;
+}
+
+.general-instructions-card .card-image {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.general-instructions-card .card-content {
+    padding: 10px !important;
+    min-height: 150px !important;
+    height: 150px !important;
+    width: 150px !important;
+    max-height: 150px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+}
+
+.general-instructions-card .media {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+}
+
+.general-instructions-card .media-left {
+    display: none !important;
+}
+
+.general-instructions-card .media-content {
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.general-instructions-card .title.is-5 {
+    font-size: 0.85rem !important;
+    margin-bottom: 0 !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+    padding: 0 !important;
+}
+
+/* Mobile responsive styles for General Instructions buttons */
+@media (max-width: 768px) {
+    .general-instructions-columns {
+        max-width: 100% !important;
+        gap: 10px !important;
+        padding: 10px !important;
+        justify-content: center !important;
+    }
+
+    .general-instructions-columns .column {
+        max-width: 120px !important;
+        flex: 0 0 120px !important;
+        width: 120px !important;
+        margin: 0 5px !important;
+    }
+
+    .general-instructions-columns a {
+        width: 120px !important;
+        height: 120px !important;
+    }
+
+    .general-instructions-card {
+        width: 120px !important;
+        height: 120px !important;
+        min-width: 120px !important;
+        min-height: 120px !important;
+        max-width: 120px !important;
+        max-height: 120px !important;
+    }
+
+    .general-instructions-card .card-content {
+        min-height: 120px !important;
+        height: 120px !important;
+        width: 120px !important;
+        max-height: 120px !important;
+        padding: 8px !important;
+    }
+
+    .general-instructions-card .title.is-5 {
+        font-size: 0.75rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .general-instructions-columns {
+        gap: 8px !important;
+        padding: 5px !important;
+    }
+
+    .general-instructions-columns .column {
+        max-width: 110px !important;
+        flex: 0 0 110px !important;
+        width: 110px !important;
+        margin: 0 3px !important;
+    }
+
+    .general-instructions-columns a {
+        width: 110px !important;
+        height: 110px !important;
+    }
+
+    .general-instructions-card {
+        width: 110px !important;
+        height: 110px !important;
+        min-width: 110px !important;
+        min-height: 110px !important;
+        max-width: 110px !important;
+        max-height: 110px !important;
+    }
+
+    .general-instructions-card .card-content {
+        min-height: 110px !important;
+        height: 110px !important;
+        width: 110px !important;
+        max-height: 110px !important;
+        padding: 6px !important;
+    }
+
+    .general-instructions-card .title.is-5 {
+        font-size: 0.7rem !important;
+        line-height: 1.15 !important;
+    }
+}
+
+/* Mobile optimizations for Programs page */
+@media (max-width: 768px) {
+    /* Programs container */
+    .temple.programs {
+        margin: 5px !important;
+        padding: 15px !important;
+    }
+
+    /* Program cards - stack vertically on mobile */
+    .columns {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .columns .column {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Card images on mobile */
+    .card-image {
+        height: 200px !important;
+    }
+
+    .programs .card-image {
+        height: 200px !important;
+    }
+
+    /* Card content spacing */
+    .card-content {
+        padding: 15px !important;
+    }
+
+    .card-content .title.is-4 {
+        font-size: 0.95rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 5px !important;
+    }
+
+    /* Centered columns for Winter Chardham */
+    .columns.is-centered {
+        flex-direction: column !important;
+    }
+
+    .columns.is-centered .column.is-4 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Typography */
+    .column1 {
+        font-size: 2rem !important;
+        margin: 15px 0 !important;
+    }
+
+    /* Spacing adjustments */
+    .columns {
+        padding: 5px !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small mobile - further optimizations */
+    .temple.programs {
+        margin: 3px !important;
+        padding: 10px !important;
+    }
+
+    .card-image {
+        height: 180px !important;
+    }
+
+    .programs .card-image {
+        height: 180px !important;
+    }
+
+    .card-content {
+        padding: 12px !important;
+    }
+
+    .card-content .title.is-4 {
+        font-size: 0.85rem !important;
+        line-height: 1.25 !important;
+    }
+
+    .column1 {
+        font-size: 1.5rem !important;
+        margin: 10px 0 !important;
+    }
+
+    .columns {
+        padding: 3px !important;
+    }
+
+    .columns .column {
+        margin-bottom: 10px !important;
+    }
+}

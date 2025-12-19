@@ -46,7 +46,14 @@ backToTopButton.addEventListener('click', () => {
 
 // ========== IMAGE LIGHTBOX FOR GALLERY ==========
 function initLightbox() {
-    const images = document.querySelectorAll('.gallery-image, .mySlides img, .card-image img');
+    // Get all potential images, but filter out those inside anchor tags (links)
+    const allImages = document.querySelectorAll('.gallery-image, .mySlides img, .card-image img');
+    const images = Array.from(allImages).filter(img => {
+        // Exclude images that are inside anchor tags with href (links to PDFs, external URLs, etc.)
+        const parentLink = img.closest('a');
+        return !parentLink || !parentLink.hasAttribute('href') || parentLink.getAttribute('href') === '#';
+    });
+    
     const lightbox = document.createElement('div');
     lightbox.className = 'lightbox';
     lightbox.innerHTML = `
@@ -58,7 +65,7 @@ function initLightbox() {
     document.body.appendChild(lightbox);
 
     let currentImageIndex = 0;
-    const imageArray = Array.from(images).map(img => img.src);
+    const imageArray = images.map(img => img.src);
 
     function openLightbox(index) {
         currentImageIndex = index;
@@ -74,7 +81,14 @@ function initLightbox() {
 
     images.forEach((img, index) => {
         img.style.cursor = 'pointer';
-        img.addEventListener('click', () => openLightbox(index));
+        img.addEventListener('click', (e) => {
+            // Prevent lightbox if image is inside a link
+            if (img.closest('a')) {
+                return;
+            }
+            e.stopPropagation();
+            openLightbox(index);
+        });
     });
 
     lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);

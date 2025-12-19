@@ -29,3 +29,38 @@ body {
 .ul {
     column-count: 2;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .pp1 {
+        font-size: 1.8rem !important;
+    }
+
+    .pd1, .pd2 {
+        font-size: 1rem !important;
+        padding: 10px !important;
+    }
+
+    .past {
+        padding: 0px 10px !important;
+    }
+
+    .ul {
+        column-count: 1 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .pp1 {
+        font-size: 1.5rem !important;
+    }
+
+    .pd1, .pd2 {
+        font-size: 0.9rem !important;
+        padding: 8px !important;
+    }
+
+    .past {
+        padding: 0px 5px !important;
+    }
+}

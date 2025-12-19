@@ -759,6 +759,11 @@ a {
 
 /* ========== RESPONSIVE IMPROVEMENTS ========== */
 @media (max-width: 768px) {
+    /* General Layout */
+    body {
+        font-size: 14px;
+    }
+
     .floating {
         width: 90%;
         position: relative;
@@ -768,6 +773,11 @@ a {
     .top_nav {
         position: relative;
         top: 0;
+        padding: 10px 15px;
+    }
+
+    .brand_name {
+        font-size: 1.5rem !important;
     }
 
     .mobile-menu-toggle {
@@ -809,13 +819,85 @@ a {
         font-size: 18px;
     }
 
+    /* Hero Section */
+    .hero .title {
+        font-size: 2rem !important;
+        line-height: 1.2;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem !important;
+    }
+
+    .hero .button {
+        padding: 15px 30px !important;
+        font-size: 1rem !important;
+        margin: 10px 0 !important;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Cards */
+    .card-image {
+        height: 200px;
+    }
+
+    .programs .card {
+        min-height: 350px;
+    }
+
+    .card-content {
+        padding: 15px !important;
+    }
+
+    .card-content .title {
+        font-size: 1rem !important;
+    }
+
+    .card-content .title.is-4 {
+        font-size: 0.95rem !important;
+    }
+
+    /* Columns */
+    .columns {
+        margin: 0 !important;
+        padding: 5px !important;
+    }
+
+    .columns .column {
+        padding: 5px !important;
+        margin-bottom: 15px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px 15px !important;
+        font-size: 0.9rem;
+    }
+
+    .footer .title {
+        font-size: 1.2rem !important;
+    }
+
+    .footer .subtitle {
+        font-size: 1rem !important;
+    }
+
+    .footer p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    /* Back to top */
     .back-to-top {
         width: 45px;
         height: 45px;
         bottom: 20px;
         right: 20px;
+        font-size: 18px;
     }
 
+    /* Lightbox */
     .lightbox-prev,
     .lightbox-next {
         font-size: 30px;
@@ -836,11 +918,92 @@ a {
         font-size: 30px;
     }
 
+    .lightbox-img {
+        max-width: 95%;
+        max-height: 95%;
+    }
+
+    /* Typography */
+    .column1 {
+        font-size: 2rem !important;
+        margin: 15px 0 !important;
+    }
+
+    /* Temple/Programs Container */
+    .temple {
+        margin: 5px !important;
+        padding: 15px !important;
+        border-radius: 15px !important;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    .hero .title {
+        font-size: 1.5rem !important;
+    }
+
+    .hero .subtitle {
+        font-size: 1rem !important;
+    }
+
+    .hero .button {
+        padding: 12px 25px !important;
+        font-size: 0.9rem !important;
+    }
+
     .card-image {
-        height: 200px;
+        height: 180px;
     }
 
     .programs .card {
-        min-height: 350px;
+        min-height: 320px;
+    }
+
+    .card-content {
+        padding: 12px !important;
+    }
+
+    .card-content .title {
+        font-size: 0.9rem !important;
+    }
+
+    .card-content .title.is-4 {
+        font-size: 0.85rem !important;
+    }
+
+    .column1 {
+        font-size: 1.5rem !important;
+    }
+
+    .footer {
+        padding: 15px 10px !important;
+        font-size: 0.8rem;
+    }
+
+    .footer .title {
+        font-size: 1rem !important;
+    }
+
+    .footer .subtitle {
+        font-size: 0.9rem !important;
+    }
+
+    .temple {
+        margin: 5px !important;
+        padding: 10px !important;
+    }
+
+    .columns {
+        padding: 3px !important;
+    }
+
+    .columns .column {
+        padding: 3px !important;
+        margin-bottom: 10px;
     }
 }
