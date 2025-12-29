@@ -229,10 +229,16 @@ body {
 
 /* Image optimization for program cards */
 .card-image {
-    height: 250px;
+    height: 400px;
     overflow: hidden;
     width: 100%;
     position: relative;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 .card-image figure {
@@ -240,11 +246,16 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-image figure.image {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .card-image figure.image.is-500x500 {
@@ -256,9 +267,11 @@ body {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     display: block;
+    margin: 0;
+    padding: 0;
 }
 
 /* General Instructions cards - make them square button-like */
@@ -466,11 +479,22 @@ body {
 
     /* Card images on mobile */
     .card-image {
-        height: 200px !important;
+        height: 300px !important;
+        background-color: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     .programs .card-image {
-        height: 200px !important;
+        height: 300px !important;
+    }
+    
+    .card-image img {
+        object-fit: contain !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     /* Card content spacing */
@@ -515,11 +539,22 @@ body {
     }
 
     .card-image {
-        height: 180px !important;
+        height: 250px !important;
+        background-color: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
     .programs .card-image {
-        height: 180px !important;
+        height: 250px !important;
+    }
+    
+    .card-image img {
+        object-fit: contain !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .card-content {
