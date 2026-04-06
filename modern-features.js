@@ -19,7 +19,25 @@ const observer = new IntersectionObserver((entries) => {
 // Observe all elements with fade-in class
 document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in-on-scroll');
-    fadeElements.forEach(el => observer.observe(el));
+    fadeElements.forEach(el => {
+        observer.observe(el);
+        // Add visible class when intersecting
+        const visibleObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    visibleObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        visibleObserver.observe(el);
+    });
+    
+    // Add staggered animation delays to counter columns
+    const counterColumns = document.querySelectorAll('.columns_loc .column');
+    counterColumns.forEach((column, index) => {
+        column.style.animationDelay = `${index * 0.2}s`;
+    });
 });
 
 // ========== BACK TO TOP BUTTON ==========

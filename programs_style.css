@@ -7,24 +7,69 @@ body {
   box-sizing: border-box;
 }
 
+/* Enhanced Card Animations and Effects */
 .zoom {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.zoom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+    z-index: 1;
+}
+
+.zoom:hover::before {
+    left: 100%;
 }
 
 .zoom:hover {
-  -ms-transform: scale(1.05) translateY(-5px); /* IE 9 */
-  -webkit-transform: scale(1.05) translateY(-5px); /* Safari 3-8 */
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  -ms-transform: scale(1.06) translateY(-8px);
+  -webkit-transform: scale(1.06) translateY(-8px);
+  transform: scale(1.06) translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.zoom .card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.zoom .card-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.zoom:hover .card-image::after {
+    opacity: 1;
 }
 
 .zoom .card-image img {
-    transition: transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: brightness(1);
 }
 
 .zoom:hover .card-image img {
-    transform: scale(1.1);
+    transform: scale(1.15);
+    filter: brightness(1.05);
 }
 
 
@@ -62,8 +107,23 @@ body {
 }
 
 .columns {
-     padding: 1%;
+     padding: 2%;
    text-align: center;
+   margin-bottom: 30px;
+   position: relative;
+}
+
+.columns::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #d4a574, transparent);
+    border-radius: 2px;
+    opacity: 0.6;
 }
 
 .columns .column {
@@ -73,16 +133,35 @@ body {
 
 .temple {
         margin: 10px;
-        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-        border-radius: 20px;
-        padding: 30px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        border-radius: 24px;
+        padding: 40px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+}
+
+.temple::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(168, 111, 50, 0.05) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .temple:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .column {
@@ -93,31 +172,105 @@ body {
 .column:hover {
     background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
     border-radius: 15px;
+    transform: scale(1.01);
+    transition: all 0.3s ease;
 }
 
 .column .card {
     height: 100%;
     display: flex;
     flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.column .card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #a86f32, #d4a574, #f4c430);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.column .card:hover::after {
+    opacity: 1;
 }
 
 .column .card .card-content {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+    position: relative;
+}
+
+.column .card .card-content .title.is-4 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: color 0.3s ease;
+}
+
+.column .card:hover .card-content .title.is-4 {
+    color: #a86f32;
+}
+
+.column .card .card-content .title.is-4:first-child {
+    font-size: 1.15rem;
+    background: linear-gradient(135deg, #a86f32 0%, #d4a574 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
 }
 
 .column1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     text-align: center;
-    background: linear-gradient(135deg, #a86f32 0%, #d4a574 100%);
+    background: linear-gradient(135deg, #a86f32 0%, #d4a574 50%, #f4c430 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-weight: 700;
     margin: 20px 0;
-    animation: fadeInUp 0.8s ease-out;
+    animation: fadeInUp 0.8s ease-out, shimmer 3s infinite;
+    text-shadow: 0 0 30px rgba(168, 111, 50, 0.3);
+    position: relative;
+    letter-spacing: 2px;
+}
+
+@keyframes shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.column1::after {
+    content: '✨';
+    position: absolute;
+    font-size: 0.4em;
+    animation: sparkle 2s infinite;
+    opacity: 0.7;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
 }
 
 .loc_name {
@@ -227,18 +380,31 @@ body {
     
 }
 
-/* Image optimization for program cards */
+/* Enhanced Image optimization for program cards */
 .card-image {
     height: 400px;
     overflow: hidden;
     width: 100%;
     position: relative;
-    background-color: transparent;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     margin: 0;
+    border-radius: 16px 16px 0 0;
+}
+
+.card-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.05) 100%);
+    z-index: 1;
+    pointer-events: none;
 }
 
 .card-image figure {
@@ -272,6 +438,9 @@ body {
     display: block;
     margin: 0;
     padding: 0;
+    transition: all 0.5s ease;
+    position: relative;
+    z-index: 0;
 }
 
 /* General Instructions cards - make them square button-like */
@@ -466,12 +635,13 @@ body {
     }
 
     /* Program cards - stack vertically on mobile */
-    .columns {
+    .temple.programs .columns:not(.general-instructions-columns) {
+        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
     }
 
-    .columns .column {
+    .temple.programs .columns:not(.general-instructions-columns) .column {
         width: 100% !important;
         max-width: 100% !important;
         margin-bottom: 15px !important;
@@ -578,4 +748,233 @@ body {
     .columns .column {
         margin-bottom: 10px !important;
     }
+}
+
+/* ============================================
+   ENHANCED VISUAL EFFECTS - WOW FACTOR
+   ============================================ */
+
+/* Staggered fade-in animation for cards */
+.columns .column {
+    animation: fadeInUpStagger 0.6s ease-out backwards;
+}
+
+.columns .column:nth-child(1) { animation-delay: 0.1s; }
+.columns .column:nth-child(2) { animation-delay: 0.2s; }
+.columns .column:nth-child(3) { animation-delay: 0.3s; }
+.columns .column:nth-child(4) { animation-delay: 0.4s; }
+.columns .column:nth-child(5) { animation-delay: 0.45s; }
+.columns .column:nth-child(6) { animation-delay: 0.5s; }
+
+@keyframes fadeInUpStagger {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Enhanced General Instructions Cards */
+.general-instructions-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+    border: 2px solid transparent !important;
+    background-clip: padding-box !important;
+    position: relative !important;
+}
+
+.general-instructions-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    border-radius: 10px !important;
+    padding: 2px !important;
+    background: linear-gradient(135deg, #a86f32, #d4a574, #f4c430) !important;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
+    -webkit-mask-composite: xor !important;
+    mask-composite: exclude !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease !important;
+    z-index: -1 !important;
+}
+
+.general-instructions-card:hover::before {
+    opacity: 1 !important;
+}
+
+.general-instructions-card .title.is-5 {
+    background: linear-gradient(135deg, #a86f32 0%, #d4a574 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    transition: all 0.3s ease !important;
+}
+
+.general-instructions-card:hover .title.is-5 {
+    transform: scale(1.05) !important;
+}
+
+/* Pulse animation for important cards */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(168, 111, 50, 0.3);
+    }
+}
+
+.column .card:first-child {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+/* Enhanced date and location styling */
+.card-content .title.is-4:not(:first-child) {
+    color: #5a5a5a;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* Loading shimmer effect for images */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.card-image img {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+.card-image img[src] {
+    animation: none;
+}
+
+/* Smooth scroll reveal */
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced link hover effects */
+.column a {
+    text-decoration: none;
+    position: relative;
+    display: block;
+}
+
+.column a::after {
+    content: '→';
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #a86f32;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.column a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Decorative elements */
+.temple.programs::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(168, 111, 50, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.temple.programs::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(212, 165, 116, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Program cards: fixed columns per row (general-instructions uses its own layout) */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .temple.programs .columns:not(.general-instructions-columns) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+        max-width: 920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .temple.programs .columns:not(.general-instructions-columns) {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 25px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced focus states for accessibility */
+.column a:focus {
+    outline: 3px solid #a86f32;
+    outline-offset: 4px;
+    border-radius: 16px;
+}
+
+/* Gradient text effect for dates */
+.card-content .title.is-4:first-child {
+    position: relative;
+}
+
+.card-content .title.is-4:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #a86f32, #d4a574);
+    transition: width 0.4s ease;
+}
+
+.column .card:hover .card-content .title.is-4:first-child::after {
+    width: 100%;
 }

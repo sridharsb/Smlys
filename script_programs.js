@@ -38,3 +38,40 @@ VANTA.TOPOLOGY({
   })
   
   VANTA.TOPOLOGY('#vantajs')
+
+// Enhanced scroll reveal animations
+function initScrollReveal() {
+    const elements = document.querySelectorAll('.fade-in-on-scroll, .columns .column');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    initScrollReveal();
+    
+    // Add staggered animation delays to columns
+    const columns = document.querySelectorAll('.columns .column');
+    columns.forEach((column, index) => {
+        column.style.animationDelay = `${index * 0.1}s`;
+    });
+});
+
+// Re-initialize on window resize
+window.addEventListener('resize', () => {
+    initScrollReveal();
+});
