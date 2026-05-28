@@ -635,13 +635,13 @@ body {
     }
 
     /* Program cards - stack vertically on mobile */
-    .temple.programs .columns:not(.general-instructions-columns) {
+    .temple.programs .program-cards-grid {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
     }
 
-    .temple.programs .columns:not(.general-instructions-columns) .column {
+    .temple.programs .program-cards-grid .column {
         width: 100% !important;
         max-width: 100% !important;
         margin-bottom: 15px !important;
@@ -924,11 +924,16 @@ body {
     pointer-events: none;
 }
 
-/* Program cards: fixed columns per row (general-instructions uses its own layout) */
+/* Program cards: one grid, equal rows (general-instructions uses its own layout) */
+.temple.programs .program-cards-grid .media-content {
+    text-align: left;
+}
+
 @media (min-width: 769px) and (max-width: 1023px) {
-    .temple.programs .columns:not(.general-instructions-columns) {
+    .temple.programs .program-cards-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
         gap: 25px;
         max-width: 920px;
         margin-left: auto;
@@ -937,13 +942,19 @@ body {
 }
 
 @media (min-width: 1024px) {
-    .temple.programs .columns:not(.general-instructions-columns) {
+    .temple.programs .program-cards-grid {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: stretch;
         gap: 25px;
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /* Center Omkar Ujjain when it is the lone card on the last row (10 cards) */
+    .temple.programs .program-cards-grid > .column:nth-child(3n+1):nth-last-child(1) {
+        grid-column: 2;
     }
 }
 
